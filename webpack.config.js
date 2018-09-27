@@ -72,6 +72,16 @@ module.exports = {
         collapseWhitespace: true
       }
     }),
+
+    new HtmlWebpackPlugin({
+    template: './src/science.html',
+    filename: 'science.html',
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true
+    }
+  }),
+
     new UglifyJsPlugin(),
     new CleanWebpackPlugin(['dist'])
   ]

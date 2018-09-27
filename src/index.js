@@ -11,4 +11,14 @@ $(document).ready(function() {
     event.preventDefault();
     $("#mobileDropDownContainer").toggle();
   })
+
+  $(".scienceBackground").on("mousemove", function(event) {
+    var xPos = event.pageX;
+    $(".scienceBackground").css({
+      "background-position" : xPos + 'px,'+
+                              xPos/6 + 'px,'+
+                              xPos/12 + 'px,'+
+                              xPos/16 + 'px,'
+    })
+  })
 });

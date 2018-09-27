@@ -31,6 +31,7 @@ html {
     box-sizing: border-box;
     font-family: $simpleFont;
     font-size: 24px;
+    background-color: lighten($dkgreen, 40);
 }
 
 *, *:before, *:after {
@@ -49,6 +50,10 @@ html {
               url(../img/spacetunnel.jpg);
   background-size: auto 100%;
   background-repeat: no-repeat;
+}
+
+h1, h2 {
+  font-family: $flavorfulfont;
 }
 
 .parallaxImage1 {
@@ -78,6 +83,7 @@ html {
   position: fixed;
   width: 100%;
   margin-bottom: 40px;
+  z-index: 1000;
   #mobileMenu {
     height: 25px;
     @include desktop {
@@ -117,6 +123,37 @@ html {
   }
 }
 
+.productsParallax {
+  min-height: 100%;
+  background: url(../img/ladyleaves.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+  h1 {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.guaranteeParallax {
+  min-height: 100%;
+  background: url(../img/sad.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  position: relative;
+  height: 65vh;
+  .guarantee-text {
+    position: absolute;
+    text-align: center;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 .parallaxImage1 {
   min-height: 100%;
@@ -191,6 +228,54 @@ html {
     font-size: 1rem;
     font-family: $flavorfulfont;
     // text-align: center;
+  }
+}
+
+.productsList {
+  margin: 0 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  text-align: center;
+  padding: {
+    top: 5%;
+    bottom: 5%;
+  }
+  img {
+    height: 15vw;
+    margin: {
+      left: auto;
+      right: auto;
+      bottom: 10%;
+    }
+  }
+  h3 {
+    font-size: 25px;
+  }
+  .tape-item {
+    p {
+      width: 90%;
+    }
+  }
+  @include mobile {
+    flex-direction: column;
+    img {
+      height: 200px;
+      margin-bottom: 0;
+    }
+    .tape-item {
+      margin-top: 15%;
+    }
+  }
+  @include tablet {
+    flex-direction: column;
+    img {
+      height: 200px;
+      margin-bottom: 0;
+    }
+    .tape-item {
+      margin-top: 15%;
+    }
   }
 }
 

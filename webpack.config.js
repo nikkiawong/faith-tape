@@ -81,6 +81,16 @@ module.exports = {
       collapseWhitespace: true
     }
   }),
+  
+  new HtmlWebpackPlugin({
+    inject: 'body',
+    template: './src/products.html',
+    filename: 'products.html',
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true
+    }
+  }),
 
     new UglifyJsPlugin(),
     new CleanWebpackPlugin(['dist'])

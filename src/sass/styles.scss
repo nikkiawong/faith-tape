@@ -1,0 +1,189 @@
+$simpleFont: 'Noto Sans', sans-serif;
+$flavorfulfont: 'Lobster', cursive;
+$mobile-width: 400px;
+$tablet-width: 750px;
+$desktop-width: 751px;
+$dkgreen: #5F7367;
+$purple: #B07BAC;
+$grey: #D9D7DD;
+$ltblue: #E6FDFF;
+$ltgreen: #DBF9F4;
+
+
+@mixin mobile {
+  @media (max-width: #{$mobile-width}) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media (min-width: #{$mobile-width + 1px}) and (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+html {
+    box-sizing: border-box;
+    font-family: $simpleFont;
+    font-size: 24px;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+    margin: 0px;
+    padding: 0px;
+
+}
+
+.parallaxImage1 {
+  // position: relative;
+  .desktopLinkIcon1 {
+    position: absolute;
+    top: 600px;
+    left: 600px;
+    img {
+      width: 300px;
+    }
+  }
+}
+
+.navBarImages {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px;
+}
+
+.navLogoBar {
+  top: 0;
+  min-height: 80px;
+  background-color: $dkgreen;
+  position: fixed;
+  width: 100%;
+  margin-bottom: 40px;
+  #mobileMenu {
+    height: 25px;
+    @include desktop {
+      display: none;
+    }
+  }
+  #Logo {
+    height: 70px;
+    @include desktop {
+      display: block;
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+#mobileDropDownContainer {
+  background-color: white;
+  margin-top: 0px;
+  width: 200px;
+  height: auto;
+  padding-left: 30px;
+  position: fixed;
+  display: none;
+  #mobileDropDown {
+    font-size: .8em;
+    a {
+    color: black;
+    }
+  }
+  @include mobile {
+    margin-top: 120px;
+  }
+  @include tablet {
+    margin-top: 120px;
+  }
+}
+
+
+.parallaxImage1 {
+  min-height: 100%;
+  background: url(../img/buildingsky.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+
+.parallaxImage2 {
+  background: url(../img/dudedirt.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+
+.parallaxImage3 {
+  background: url(../img/spacetunnel.jpg) center center fixed #000;
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+}
+
+.productInfo {
+  background-color: lighten($dkgreen, 40);
+  height: auto;
+  text-align: center;
+  .productDescription {
+    padding-bottom: 30px;
+    font-family: $flavorfulfont;
+    font-size: 1.5rem;
+  }
+  .productImage {
+    img {
+      padding: 0px 20px;
+      @include mobile {
+      width: 100%;
+    }
+
+    }
+    //this only works as mobile setting
+    min-width: 100px;
+  }
+}
+
+.productIcons {
+  background-color: lighten($dkgreen, 40);
+  display: flex;
+  text-align: center;
+  justify-content: space-around;
+  flex-direction: column;
+  @include desktop {
+  flex-direction: row;
+  .iconGroup {
+    width: 25%;
+  }
+}
+  .icon {
+    height: 200px;
+    padding: 30px 20px 0px 20px;
+  }
+  .iconText {
+    padding: 30px 20px;
+  }
+}
+
+.disclaimers {
+  background-color: lighten($dkgreen, 40);
+  padding: 30px;
+  font-size: .5em;
+  h5 {
+    font-size: 1rem;
+    font-family: $flavorfulfont;
+    // text-align: center;
+  }
+}
+
+.bottomSpacer {
+  background-color: $dkgreen;
+  height: 30px;
+}

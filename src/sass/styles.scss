@@ -242,17 +242,31 @@ h1, h2 {
     bottom: 5%;
   }
   img {
-    height: 15vw;
+    height: 12vw;
     margin: {
       left: auto;
       right: auto;
       bottom: 10%;
     }
   }
+  a {
+    color: $dkgreen;
+    &:hover {
+      color: darken($dkgreen, 25);
+    }
   h3 {
     font-size: 25px;
+    }
   }
   .tape-item {
+    transition: all 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000);
+    &:hover {
+      cursor: pointer;
+      transform: scale(1.05);
+    }
+    @include desktop {
+      width: (100%/4);
+    }
     p {
       width: 90%;
     }

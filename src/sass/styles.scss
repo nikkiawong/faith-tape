@@ -67,6 +67,7 @@ html {
   position: fixed;
   width: 100%;
   margin-bottom: 40px;
+  z-index: 1000;
   #mobileMenu {
     height: 25px;
     @include desktop {
@@ -106,6 +107,20 @@ html {
   }
 }
 
+.productsParallax {
+  min-height: 100%;
+  background: url(../img/ladyleaves.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+  h1 {
+    position: absolute;
+    color: white;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
 
 .parallaxImage1 {
   min-height: 100%;

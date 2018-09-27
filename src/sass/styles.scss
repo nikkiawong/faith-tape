@@ -9,6 +9,10 @@ $grey: #D9D7DD;
 $ltblue: #E6FDFF;
 $ltgreen: #DBF9F4;
 
+@mixin movements($xdeg, $ydeg, $rotZ) {
+  0% {transform: translate(0px, 0px) rotateZ(0deg);}
+  100% {transform: translate($xdeg, $ydeg) rotateZ($rotZ);}
+}
 
 @mixin mobile {
   @media (max-width: #{$mobile-width}) {
@@ -157,6 +161,7 @@ h1, h2 {
 
 .parallaxImage1 {
   min-height: 100%;
+  min-width: 100%;
   background: url(../img/buildingsky.jpg) center center fixed #000;
   overflow: hidden;
   background-size: cover;
@@ -297,3 +302,83 @@ h1, h2 {
   background-color: $dkgreen;
   height: 30px;
 }
+
+
+#r-parachuter {
+  height: 10vh;
+  width: 250px;
+  margin-left: 33%;
+  transition-property: all transform;
+  transform: translateX(0px);
+  margin-top: 150px;
+  img {
+    height: 50px;
+  }
+  // animation-duration: 3s;
+  // animation-name: move-r;
+  &.classy {
+    animation-duration: 4s;
+    animation-name: dive-r;
+    // transform: translateX(300px);
+  }
+}
+
+
+#l-parachuter {
+  height: 10vh;
+  width: 250px;
+  margin-left: 63%;
+  transition-property: all;
+  transform: translateX(0px);
+  margin-top: -155px;
+  img {
+    width: 150px;
+  }
+  &.classy {
+  animation-duration: 3s;
+  animation-name: move-r;
+  }
+}
+
+#f-parachuter {
+  height: 10vh;
+  width: 175px;
+  margin-left: 43%;
+  animation-fill-mode: both;
+  transition-property:all;
+  margin-top: 50px;
+  img {
+    height: 50px;
+  }
+  &.classy {
+    animation-duration: 4s;
+    animation-name: dive-f;
+  }
+}
+
+
+/* Animations */
+
+@keyframes dive-r {
+  @include movements(620px, 600px, 25deg);
+}
+
+@keyframes dive-l {
+  @include movements(-620px, 600px, -30deg);
+}
+
+@keyframes dive-f {
+  @include movements(620px, 600px, 15deg);
+}
+
+
+  [data-aos="flop"] {
+    transform: translate(0px, 0px, 1deg);
+    width:inherit;
+    transition-property: all;
+    [data-aos="flop"].aos-animate {
+      transform: translate(620px, 600px, 10deg);
+      opacity: 1;
+      width: 300%;
+    }
+  }

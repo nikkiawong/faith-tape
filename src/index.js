@@ -14,6 +14,14 @@ $(document).ready(function() {
     $("#mobileDropDownContainer").toggle();
   })
 
+  $("#l-parachuter").click(function() {
+    event.preventDefault();
+    $("#r-parachuter").addClass('classy');
+    alert();
+    $("#f-parachuter").addClass('classy');
+    alert();
+  })
+
   $(".scienceBackground").on("mousemove", function(event) {
     var xPos = event.pageX;
     $(".scienceBackground").css({

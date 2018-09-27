@@ -41,6 +41,31 @@ html {
     // border: dotted green 2px;
 }
 
+.testimonialBackground {
+  min-height: 100%;
+  background: url(../img/bowienipples.jpg) center center fixed #000;
+  overflow: hidden;
+  background-size: cover;
+  height: 100vh;
+}
+
+.testi-main-content {
+  max-height: 100vh;
+}
+.testimonialContent {
+  position: relative;
+}
+.testimonial {
+  position: fixed;
+  top: 400px;
+  img {
+    width: 250px;
+    padding: 5px;
+    border: black solid 2px;
+  }
+}
+
+
 
 .scienceBackground {
   min-height: 100%;
@@ -374,6 +399,10 @@ h1, h2 {
 
 #tapeKid1 {
   left: 25%;
+}
+
+.testimonialContent {
+  height: 25vh;
 }
 
 .bottomSpacer {

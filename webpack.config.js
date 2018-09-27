@@ -81,11 +81,21 @@ module.exports = {
       collapseWhitespace: true
     }
   }),
-  
+
   new HtmlWebpackPlugin({
     inject: 'body',
     template: './src/products.html',
     filename: 'products.html',
+    minify: {
+      removeComments: true,
+      collapseWhitespace: true
+    }
+  }),
+
+  new HtmlWebpackPlugin({
+    inject: 'body',
+    template: './src/testimonials.html',
+    filename: 'testimonials.html',
     minify: {
       removeComments: true,
       collapseWhitespace: true

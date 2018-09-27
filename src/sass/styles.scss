@@ -38,7 +38,7 @@ html {
     box-sizing: inherit;
     margin: 0px;
     padding: 0px;
-
+    // border: dotted green 2px;
 }
 
 
@@ -48,13 +48,14 @@ html {
   overflow: hidden;
   background-size: cover;
   height: 100vh;
-  h1 {
-    position: absolute;
-    color: white;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
+}
+
+.tapePeopleParallax {
+  position: absolute;
+  top: 200px;
+  left: 35%;
+  transform: translate(-50%, -50%);
+  z-index: 99;
 }
 
 h1, h2 {
@@ -298,6 +299,7 @@ h1, h2 {
   }
 }
 
+
 .scienceStuff {
   margin: 0 3%;
   display: flex;
@@ -335,7 +337,8 @@ h1, h2 {
       width: (100%/4);
     }
     p {
-      width: 90%;
+      width: 100%;
+      padding: 0px 20px;
     }
   }
   @include mobile {
@@ -358,6 +361,19 @@ h1, h2 {
       margin-top: 15%;
     }
   }
+}
+
+.uk-animation-toggle {
+  position: absolute;
+  top: 500px;
+}
+
+#tapeKid2 {
+  right: 25%;
+}
+
+#tapeKid1 {
+  left: 25%;
 }
 
 .bottomSpacer {

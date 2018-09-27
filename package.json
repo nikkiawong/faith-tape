@@ -1,7 +1,6 @@
 {
   "name": "faith-tape",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
     "build": "webpack --mode development",
@@ -29,5 +28,14 @@
     "materialize-css": "^1.0.0",
     "materialize-loader": "^3.0.0",
     "uikit": "^3.0.0-rc.17"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nikkiawong/faith-tape.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nikkiawong/faith-tape/issues"
+  },
+  "homepage": "https://github.com/nikkiawong/faith-tape#readme",
+  "description": ""
 }
